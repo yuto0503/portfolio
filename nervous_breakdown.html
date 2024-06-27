@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/nervous_breakdown.css">
+
+  <title>nervousbreakdown_yuto yamazaki</title>
+
+  <!-- グーグルフォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- ヘッダー -->
+  <div class="header">
+    <div class="icon">
+      <a href="index.html"><img src="img/icon.png" alt="headerアイコン"></a>
+    </div>
+    <nav class="nav_wrapper">
+      <ul class="nav_inner" id="page-link">
+        <li><a href="about.html"><img src="img/about.png" alt="headerのabout手書き文字"></a></li>
+        <li><a href="index.html#works"><img src="img/works.png" alt="headerのworks手書き文字"></a></li>
+        <li><a href="contact.html"><img src="img/contact.png" alt="headerのcontact手書き文字"></a></li>
+      </ul>
+    </nav>
+
+  <!-- ハンバーガーメニュー -->
+  <ul>
+      <li class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </li>
+  </ul>
+    </div>
+  </header>
+
+  <!-- メインビジュアル -->
+  <main>
+  <div class="main_wrapper">
+    <div class="main_inner">
+      <h1><img class="flipRightTop" src="img/nervousbreakdown.png" alt="神経衰弱"></h1>
+    </div>
+    <div class="url zoomIn">
+      <a href="https://yuto0503.github.io/nervousbreakdown/" target="_blank">URL : https://yuto0503.github.io/nervousbreakdown/</a></div>
+    <div class="main_item fadeIn">
+      <img src="img/nervousbreakdown_moc.png" alt="神経衰弱メインビジュアル">
+    </div>
+  </div>
+
+  <!-- ポイント -->
+      <div class="point_wapper fadeUp">
+        <p>JavaScriptを使用してオリジナルの神経衰弱を作成しました。<br>
+        </p>
+      </div>
+      </div>
+
+      <!-- 詳細 -->
+      <ul class="content">
+        <li class="fadeUpTrigger">
+          <h2>目的</h2>
+          <div>
+            <p>JavaScriptの学習をしたので、ポートフォリオに載せられる成果物を作成するため。</p>
+          </div>
+        </li>
+        <li class="fadeUpTrigger">
+          <h2>要件</h2>
+          <div>
+            <p>・前52枚のカードを画像で用意（裏面含め53枚使用）<br>
+              ・数字が揃ったものは画面から消す<br>
+              ・あたりかはずれかを画面に出力<br>
+              ・一枚目がめくられてからの経過秒数をカウントして画面に出力<br>
+              ・秒数カウントは一時停止ボタンで停止可能（カウントが始まるまではボタンは反応しない）<br>
+              ・一時停止中はカードをクリックしても反応しないようにする<br>
+              ・一時停止中はボタンの文字は「再開」となる<br>
+              ・すべてめくり終えると経過秒数と間違えた回数表示<br>
+              ・間違えた回数が30回未満であれば「素晴らしい！」、30回以上の場合は「次は頑張りましょう！」と表示<br>
+              ・諦めるボタンを設置し、ダイアログボックスで確認後、すべてのカードをオープンしメッセージを表示<br>
+              ・クリアした場合、諦めた場合どちら「もう一度やる！」というテキストでリロード用のリンクを用意<br>
+            </p>
+          </div>
+        </li>
+        <li class="fadeUpTrigger">
+          <h2>ポイント</h2>
+          <div>
+            <p>・「ゲームスタート」ボタンを用意し、クリックしないとゲームをスタートできなくした点。<br>
+              ・デザインの要素を追加し、見やすいレイアウトの作成<br>
+              ・「ゲームスタート」ボタンをを横長にして、一番大きくすることで目につきやすくした点。オレンジ色のボタンは比較的クリックされやすい。<br>
+              ・「もう一度やる」もボタンとして作成。<br>
+              ・クリックできる箇所（ボタンやカード）は「cursor: pointer;」を追加してクリックできると分かるように作成。<br>
+              ・あたり or はずれの表示を毎回消えるように設定</p>
+          </div>
+        </li>
+        <li class="fadeUpTrigger">
+          <h2>使用ツール/言語</h2>
+          <div>
+            <p>・Visual Studio Code/HTML・CSS・JavaScript</p>
+          </div>
+        </li>
+        <li class="fadeUpTrigger">
+          <h2>制作範囲・期間</h2>
+          <div>
+            <p>・20時間ほど（フローチャート：1時間、メモコーディング：30分、実装：18時間30分）
+            </p>
+          </div>
+        </li>
+      </ul>
+</main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy2022 YUTO YAMAZAKI</p>
+  </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/product.js"></script>
+
+</body>
+</html>

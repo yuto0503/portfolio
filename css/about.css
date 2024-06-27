@@ -1,0 +1,330 @@
+body {
+  background-color: #f5f5ee;
+}
+
+/********************************************************************************* ヘッダー 
+***********************************************************************************/
+.header {
+  width: 100vw;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.icon {
+  position: fixed;
+  top: 10px;
+  left: 5.0vw;
+  border-radius: 50%;
+}
+.nav_wrapper {
+  position: fixed;
+  top: 0;
+  right: 4.0vw;
+}
+.nav_inner {
+  display: flex;
+  margin-top: 40px;
+}
+.nav_inner a {
+  margin-right: 50px;
+}
+
+/********************************************************************************* メインビジュアル 
+***********************************************************************************/
+.about_pic  {
+  margin-top: 150px;
+  text-align: center;
+}
+.about_pic  img {
+  width: 600px;
+}
+.about_wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+ h1 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.about_inner {
+  font-size: 18px;
+  margin-top: 100px;
+  line-height: 1.3;
+}
+
+/********************************************************************************* 強み 
+***********************************************************************************/
+  .strength_wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  }
+  .strength_inner {
+    margin-top: 100px;
+    text-align: center;
+  }
+  .strength_inner img {
+    width: 400px;
+  }
+  .strength_item h3 {
+    margin-top: 50px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .strength_item p {
+    margin-top: 50px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+/********************************************************************************* フッター 
+***********************************************************************************/
+footer {
+  width: 100vw;
+  height: 100px;
+  background-color: #cbe0ce;
+}
+footer p {
+  text-align: center;
+  padding-top: 50px;
+  color: #f5f5ee;
+}
+
+/********************************************************************************* スクロールしたら
+***********************************************************************************/
+/* ふわっ */
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 3.0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+  @keyframes fadeInAnime {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .box{
+    opacity: 0;
+  }
+  
+  /* 順番に出現 */
+  .fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 3.0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+  @keyframes fadeUpAnime {
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  .delay-time {
+  animation-delay: 0.2s;
+  }
+
+/* 右上へパタっ */
+.flipRightTop {
+  animation-name: flipRightTopAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+  @keyframes flipRightTopAnime {
+    from {
+     transform: translate(-20px,80px) rotate(25deg);
+     opacity: 0;
+    }
+    to {
+     transform: translate(0,1) rotate(0deg);
+     opacity: 1;
+    }
+  }
+  .flipRightTopTrigger {
+    opacity: 0;
+  }
+
+/* 拡大 */
+  .zoomIn {
+    animation-name: zoomInAnime;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes zoomInAnime {
+    from {
+    transform: scale(0.6);
+    opacity: 0;
+    }
+    to {
+      transform: scale(1);
+    opacity: 1;
+    }
+  }
+    .zoomInTrigger {
+      opacity: 0;
+  }
+
+  /* 滑らかに出現  */
+.smooth {
+  animation-name: smoothAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transform-origin: left;
+  opacity: 0;
+}
+@keyframes smoothAnime {
+  from {
+  transform: translate3d(0, 100%, 0) skewY(12deg);
+  opacity:0;
+  }
+  to {
+  transform: translate3d(0, 0, 0) skewY(0);
+  opacity:1;
+  }
+}
+.smoothTrigger {
+    opacity: 0;
+}
+
+
+/********************************************************************************* スマホレイアウト
+***********************************************************************************/
+  @media screen and (max-width: 1050px) {
+/********************************************************************************* ヘッダー
+***********************************************************************************/
+  .icon img {      
+    width: 70px;
+    }
+  .nav_wrapper {
+    position: initial;
+    right: 0;
+    }
+  .nav_inner {
+    position: absolute;
+    left: -100%;
+    transition: 0.3s;
+    margin-top: 0;
+    display: initial;
+  }
+  .nav_inner.open {
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background-color: #ecf4e6;
+    transition: 0.3s
+  }
+  .nav_inner li {
+    margin-top: 60px;
+    margin-left: 0;
+  }
+  .nav_inner a {
+    color: #000;
+  }
+  .open.nav_inner {
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+  }
+
+/********************************************************************************* ハンバーガーメニュー
+***********************************************************************************/
+.hamburger {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 80px;
+}
+.hamburger span {
+  position: absolute;
+  width: 35px;
+  height: 2px;
+  background-color: #000;
+  top: 0;
+  right: 40px;
+  transition: 0.3s;
+  z-index: 1000;
+}
+.hamburger span:nth-child(1) {
+  top: 20px;
+}
+.hamburger span:nth-child(2) {
+  top: 30px;
+}
+.hamburger span:nth-child(3) {
+  top: 40px;
+}
+.hamburger.active span:nth-child(1) {
+  top: 44px;
+  transform: rotate(48deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  top: 44px;
+  transform: rotate(-48deg);
+}
+
+/********************************************************************************* メインビジュアル
+***********************************************************************************/
+  .about_pic img {
+    width: 300px;
+  }
+  .about_wrapper {
+    margin-top: 50px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .about_inner {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-top: 50px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+/********************************************************************************* 強み
+***********************************************************************************/
+  .strength_wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  h2 img {
+    width: 200px;
+    padding-left: 10px;
+  }
+  .strength_inner {
+    margin-top: 50px;
+  }
+  .strength_inner img {
+    width: 200px;
+  }
+  .strength_item h3 {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+  .strength_item p {
+    margin-top: 25px;
+    font-size: 14px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
